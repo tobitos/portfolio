@@ -10,6 +10,8 @@
 
 import React from 'react';
 
+import Navbar from 'containers/Navbar';
+
 // eslint-disable-next-line react/prefer-stateless-function
 export default class App extends React.PureComponent {
   static propTypes = {
@@ -19,6 +21,7 @@ export default class App extends React.PureComponent {
   render() {
     return (
       <div>
+        <Navbar />
         {React.Children.toArray(this.props.children)}
       </div>
     );
