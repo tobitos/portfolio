@@ -13,29 +13,25 @@ import messages from './messages';
 
 import A from 'components/A';
 
-import Logo from './logolinks.png';
-
-const Img = styled.img`
-  width: 150px;
-  margin-top: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-`;
-
-const ImageContainer = styled.div`
-  text-align: right;
-  margin-bottom: 40px;
-`;
-
-const Title = styled.h1`
-  margin-left: 25px;
-  margin-right: 25px;
+const Title = styled.p`
+  max-width: 982px;
+  margin: auto;
+  padding: 56px 24px 16px 24px;
   font-weight: 300;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 40px;
   color: #333333;
-  max-width: 50%;
+`;
+
+const Text = styled.p`
+  max-width: 982px;
+  margin: auto;
+  padding: 8px 20% 0 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
 `;
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -43,21 +39,33 @@ export default class HomePage extends React.PureComponent {
   render() {
     return (
       <div>
-        <ImageContainer>
-          <Img src={Logo} />
-        </ImageContainer>
         <Title>
+          <FormattedMessage {...messages.header} />
+        </Title>
+        <Text>
           <FormattedMessage
-            {...messages.header}
+            {...messages.intro1}
             values={{
-              linkedIn: (
-                <A href="https://www.linkedin.com/in/tobiaspoel/">
-                  LinkedIn Profile
+              reactBoilerplate: (
+                <A href="https://www.github.com/react-boilerplate/react-boilerplate">
+                  react-boilerplate
                 </A>
               ),
             }}
           />
-        </Title>
+        </Text>
+        <Text>
+          <FormattedMessage
+            {...messages.intro2}
+            values={{
+              styleguide: (
+                <A href="/styleguide">
+                  <FormattedMessage {...messages.styleguide} />
+                </A>
+              ),
+            }}
+          />
+        </Text>
       </div>
     );
   }
