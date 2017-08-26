@@ -1,1 +1,6 @@
-[]
+{
+  "app.components.HomePage.header": "Nothing to see here right now, have a look at my {linkedIn}.",
+
+  "app.components.NotFoundPage.header": "This page doesn't exist, maybe there was a typo in the address.",
+  "app.components.NotFoundPage.link": "Back home"
+}
