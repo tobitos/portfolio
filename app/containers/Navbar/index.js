@@ -33,6 +33,10 @@ const Image = styled.img`
   border-radius: 50%;
   width: 55px;
   height: 55px;
+  opacity: .9;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Text = styled.div`height: 55px;`;
@@ -66,7 +70,9 @@ export default class Navbar extends React.PureComponent {
     return (
       <Container>
         <Content>
-          <Image src={ProfileSrc} />
+          <A href="/">
+            <Image src={ProfileSrc} />
+          </A>
           <Icons>
             <A href="https://www.linkedin.com/in/tobiaspoel/">
               <Icon type="Linkedin" />
