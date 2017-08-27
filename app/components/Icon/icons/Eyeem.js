@@ -4,14 +4,14 @@ import React from 'react';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class EyeEm extends React.PureComponent {
+  static defaultProps = {
+    size: 24,
+  };
+
   props: {
     size: number,
     className: string,
     id: string
-  };
-
-  static defaultProps = {
-    size: 24,
   };
 
   render() {

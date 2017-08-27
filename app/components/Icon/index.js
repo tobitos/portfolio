@@ -1,9 +1,9 @@
 /* @flow */
 import React from 'react';
 
-import Eyeem from './icons/Eyeem.js';
-import Twitter from './icons/Twitter.js';
-import Email from './icons/Email.js';
+import Eyeem from './icons/Eyeem';
+import Twitter from './icons/Twitter';
+import Email from './icons/Email';
 
 const icons = {
   Eyeem,

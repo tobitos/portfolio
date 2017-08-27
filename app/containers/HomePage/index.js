@@ -9,14 +9,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
+import A from 'components/A';
+import MaxWidthBox from 'components/MaxWidthBox';
+
 import messages from './messages';
 
-import A from 'components/A';
-
 const Title = styled.p`
-  max-width: 982px;
-  margin: auto;
-  padding: 56px 24px 16px 24px;
+  margin: 0;
+  padding-top: 72px;
+  padding-bottom: 48px;
   font-weight: 300;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 32px;
@@ -25,20 +26,26 @@ const Title = styled.p`
 `;
 
 const Text = styled.p`
-  max-width: 982px;
-  margin: auto;
-  padding: 8px 20% 0 24px;
+  margin: 0;
+  padding: 8px 20% 0 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #999999;
 `;
 
+const Separator = styled.hr`
+  margin: 72px 0 0 0;
+  border: none;
+  height: 1px;
+  background: #efefef;
+`;
+
 // eslint-disable-next-line react/prefer-stateless-function
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <div>
+      <MaxWidthBox>
         <Title>
           <FormattedMessage {...messages.header} />
         </Title>
@@ -46,9 +53,9 @@ export default class HomePage extends React.PureComponent {
           <FormattedMessage
             {...messages.intro1}
             values={{
-              reactBoilerplate: (
-                <A href="https://www.github.com/react-boilerplate/react-boilerplate">
-                  react-boilerplate
+              github: (
+                <A href="https://www.github.com/tobitos/portfolio">
+                  <FormattedMessage {...messages.github} />
                 </A>
               ),
             }}
@@ -66,7 +73,15 @@ export default class HomePage extends React.PureComponent {
             }}
           />
         </Text>
-      </div>
+        <Separator />
+        <Title>
+          <FormattedMessage {...messages.projects} />
+        </Title>
+        <Separator />
+        <Title>
+          <FormattedMessage {...messages.cv} />
+        </Title>
+      </MaxWidthBox>
     );
   }
 }

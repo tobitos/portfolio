@@ -9,12 +9,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import ProfileSrc from './profile.jpg';
-
-import messages from './messages';
-
 import A from 'components/A';
 import Icon from 'components/Icon';
+
+import ProfileSrc from './profile.jpg';
+import messages from './messages';
 
 const Container = styled.div`
   background: linear-gradient(to bottom, #fefefe 0%, #fafafa 100%);
