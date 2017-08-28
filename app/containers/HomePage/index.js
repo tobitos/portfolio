@@ -12,6 +12,8 @@ import { FormattedMessage } from 'react-intl';
 import A from 'components/A';
 import MaxWidthBox from 'components/MaxWidthBox';
 
+import CurriculumVitae from 'containers/CurriculumVitae';
+
 import messages from './messages';
 
 const Title = styled.p`
@@ -81,6 +83,7 @@ export default class HomePage extends React.PureComponent {
         <Title>
           <FormattedMessage {...messages.cv} />
         </Title>
+        <CurriculumVitae />
       </MaxWidthBox>
     );
   }

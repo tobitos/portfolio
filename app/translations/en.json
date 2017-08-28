@@ -10,6 +10,9 @@
   "app.components.HomePage.projects": "Projects",
   "app.components.HomePage.cv": "CV",
 
+  "app.components.CurriculumVitae.workExperience": "Work Experience",
+  "app.components.CurriculumVitae.education": "Education",
+
   "app.components.NotFoundPage.header": "This page doesn't exist, maybe there was a typo in the address.",
   "app.components.NotFoundPage.link": "Back home"
 }
