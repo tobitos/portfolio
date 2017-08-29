@@ -20,7 +20,7 @@ export default class Linkedin extends React.PureComponent {
         className={this.props.className}
         height={this.props.size}
         width={this.props.size}
-        viewBox="-8 -8 32 32"
+        viewBox="0 -6 26 26"
       >
         <path
           fillRule="nonzero"
