@@ -4,11 +4,15 @@ import React from 'react';
 import Eyeem from './icons/Eyeem';
 import Twitter from './icons/Twitter';
 import Email from './icons/Email';
+import Github from './icons/Github';
+import Linkedin from './icons/Linkedin';
 
 const icons = {
   Eyeem,
   Twitter,
   Email,
+  Github,
+  Linkedin,
 };
 
 function Icon(props: {
@@ -16,7 +20,7 @@ function Icon(props: {
   id: string,
   type: string,
   size: number,
-  iconProps: Object
+  iconProps: Object,
 }) {
   const Component = icons[props.type] || Eyeem;
 
