@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
 import A from 'components/A';
+import Text from 'components/Text';
 import MaxWidthBox from 'components/MaxWidthBox';
 
 import CurriculumVitae from 'containers/CurriculumVitae';
@@ -25,15 +26,6 @@ const Title = styled.p`
   font-size: 32px;
   line-height: 40px;
   color: #333333;
-`;
-
-const Text = styled.p`
-  margin: 0;
-  padding: 8px 20% 0 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
 `;
 
 const Separator = styled.hr`
@@ -84,6 +76,7 @@ export default class HomePage extends React.PureComponent {
           <FormattedMessage {...messages.cv} />
         </Title>
         <CurriculumVitae />
+        <Separator />
       </MaxWidthBox>
     );
   }
