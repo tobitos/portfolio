@@ -1,4 +1,4 @@
 # Portfolio
 ## tobiaspoel.de
 
-### Setup based on react-boilerplate (https://github.com/react-boilerplate/react-boilerplate)
+Small portfolio page and tech playground.
