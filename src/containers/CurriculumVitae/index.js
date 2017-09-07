@@ -48,50 +48,49 @@ const education = [
   }
 ];
 
-// eslint-disable-next-line react/prefer-stateless-function
-export default class CurriculumVitae extends React.PureComponent {
-  render() {
-    return (
-      <Page>
-        <Row>
-          <Column fluid sm={12} lg={3}>
-            Work Experience
-          </Column>
-          <Column fluid sm={12} lg={9}>
-            {workExperience.map(job =>
-              <Row key={job.company}>
-                <Column fluid sm={6}>
-                  <A href={job.link}>
-                    {job.company}
-                  </A>
-                </Column>
-                <Column fluid sm={6}>
-                  {job.duration}
-                </Column>
-              </Row>
-            )}
-          </Column>
-        </Row>
-        <Row>
-          <Column fluid sm={12} lg={3}>
-            Education
-          </Column>
-          <Column fluid sm={12} lg={9}>
-            {education.map(studyProgram =>
-              <Row key={studyProgram.program}>
-                <Column fluid sm={6}>
-                  <A href={studyProgram.link}>
-                    {studyProgram.program} ({studyProgram.university})
-                  </A>
-                </Column>
-                <Column fluid sm={6}>
-                  {studyProgram.duration}
-                </Column>
-              </Row>
-            )}
-          </Column>
-        </Row>
-      </Page>
-    );
-  }
+function CurriculumVitae() {
+  return (
+    <Page>
+      <Row>
+        <Column fluid sm={12} lg={3}>
+          Work Experience
+        </Column>
+        <Column fluid sm={12} lg={9}>
+          {workExperience.map(job =>
+            <Row key={job.company}>
+              <Column fluid sm={6}>
+                <A href={job.link}>
+                  {job.company}
+                </A>
+              </Column>
+              <Column fluid sm={6}>
+                {job.duration}
+              </Column>
+            </Row>
+          )}
+        </Column>
+      </Row>
+      <Row>
+        <Column fluid sm={12} lg={3}>
+          Education
+        </Column>
+        <Column fluid sm={12} lg={9}>
+          {education.map(studyProgram =>
+            <Row key={studyProgram.program}>
+              <Column fluid sm={6}>
+                <A href={studyProgram.link}>
+                  {studyProgram.program} ({studyProgram.university})
+                </A>
+              </Column>
+              <Column fluid sm={6}>
+                {studyProgram.duration}
+              </Column>
+            </Row>
+          )}
+        </Column>
+      </Row>
+    </Page>
+  );
 }
+
+export default CurriculumVitae;

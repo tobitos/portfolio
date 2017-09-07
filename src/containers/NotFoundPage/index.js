@@ -29,15 +29,15 @@ const BackHome = styled(A)`
   font-family: Helvetica, Arial, sans-serif;
 `;
 
-export default class NotFound extends React.PureComponent {
-  render() {
-    return (
-      <div>
-        <Title>
-          This page doesn't exist, maybe there was a typo in the address.
-        </Title>
-        <BackHome href="/">Back home</BackHome>
-      </div>
-    );
-  }
+function NotFound() {
+  return (
+    <div>
+      <Title>
+        This page doesn't exist, maybe there was a typo in the address.
+      </Title>
+      <BackHome href="/">Back home</BackHome>
+    </div>
+  );
 }
+
+export default NotFound;

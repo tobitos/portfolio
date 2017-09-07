@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import A from '../../components/A';
 import Icon from '../../components/Icon';
 
-import ProfileSrc from './profile.jpg';
+import profileSrc from './profile.jpg';
 
 const Container = styled.div`
   background: linear-gradient(to bottom, #fefefe 0%, #fafafa 100%);
@@ -54,37 +54,37 @@ const Icons = styled.div`
   text-align: right;
 `;
 
-export default class Navbar extends React.PureComponent {
-  render() {
-    return (
-      <Container>
-        <Content>
-          <A href="/">
-            <Image src={ProfileSrc} />
+function Navbar() {
+  return (
+    <Container>
+      <Content>
+        <A href="/">
+          <Image src={profileSrc} />
+        </A>
+        <Icons>
+          <A href="https://www.linkedin.com/in/tobiaspoel/">
+            <Icon type="Linkedin" />
           </A>
-          <Icons>
-            <A href="https://www.linkedin.com/in/tobiaspoel/">
-              <Icon type="Linkedin" />
-            </A>
-            <A href="https://www.github.com/tobitos">
-              <Icon type="Github" />
-            </A>
-            <A href="https://www.twitter.com/tobipoel">
-              <Icon type="Twitter" />
-            </A>
-            <A href="https://www.eyeem.com/tobitos">
-              <Icon type="Eyeem" />
-            </A>
-            <A href="mailto:tobipoel@gmail.com">
-              <Icon type="Email" />
-            </A>
-          </Icons>
-          <Text>
-            <Name>Tobias Poel</Name>
-            <JobTitle>Senior Frontend Developer</JobTitle>
-          </Text>
-        </Content>
-      </Container>
-    );
-  }
+          <A href="https://www.github.com/tobitos">
+            <Icon type="Github" />
+          </A>
+          <A href="https://www.twitter.com/tobipoel">
+            <Icon type="Twitter" />
+          </A>
+          <A href="https://www.eyeem.com/tobitos">
+            <Icon type="Eyeem" />
+          </A>
+          <A href="mailto:tobipoel@gmail.com">
+            <Icon type="Email" />
+          </A>
+        </Icons>
+        <Text>
+          <Name>Tobias Poel</Name>
+          <JobTitle>Senior Frontend Developer</JobTitle>
+        </Text>
+      </Content>
+    </Container>
+  );
 }
+
+export default Navbar;
